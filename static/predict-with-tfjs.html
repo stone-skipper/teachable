@@ -2,19 +2,38 @@
 <html>
     <!-- https://medium.com/@baruahd5/create-image-classifier-with-node-js-tensorflow-js-google-teachable-machine-280ee5f92bad -->
 <head>
-    <title>dhiraj's emotion detection app</title>
-    <!-- <link rel="stylesheet" href="./styles.css"> -->
+    <title>Teachable Machine Simple Interactions</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
+<h1 class="title">Teachable Machine Simple Interactions <br/>
+    <a href="https://teachablemachine.withgoogle.com/">https://teachablemachine.withgoogle.com/</a>
+</h1>
+
+<div class="interaction">
+    <div class="int" id="default"><img src='./media/first.jpg'/></div>
+    <div class="int" id="first"><img src='./media/first.jpg'/></div>
+    <div class="int" id="second"><img src='./media/first.jpg'/></div>
+    <div class="int" id="third"><img src='./media/first.jpg'/></div>
+    <div class="int" id="fourth"><img src='./media/first.jpg'/></div>
+    <div class="int" id="fifth"><img src='./media/first.jpg'/></div>
+</div>
 
     <div class="wrapper">
         <button type="button" onclick="init()">Start</button>
-        <div id="webcam-container"></div>
+        <div id="webcam-container">
+            <button type="button" onclick="init()">Toggle Camera</button>
+        </div>
+
         <div id="label" class="label">
+            <!-- made for max 5 conditions -->
             <ul>
                 <li>happy:<progress id="happy-progress" max="1"></progress><span id="happy"></span></li>
                 <li>angry:<progress id="angry-progress" max="1"></progress><span id="angry"></span></li>
+                <li>happy:<progress id="happy-progress" max="1"></progress><span id="happy"></span></li>
+                <li>angry:<progress id="angry-progress" max="1"></progress><span id="angry"></span></li>
+                <li>happy:<progress id="happy-progress" max="1"></progress><span id="happy"></span></li>
             </ul>
         </div>
 

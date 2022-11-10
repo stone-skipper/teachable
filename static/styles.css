@@ -1,0 +1,38 @@
+body{
+    width:100vw;
+    height:100vh;
+    background:black;
+overflow:hidden;
+}
+h1{
+    width: 100vw;
+    text-align: center;
+    position:absolute;
+    top:0;
+    z-index: 100;
+    color:white;
+}
+
+a{
+    font-size: 0.5em;
+}
+
+.interaction .int{
+    width:100vw;
+    height:100vh;
+    position:absolute;
+
+}
+
+.int img{
+    width:100vw;
+    height:100vh;
+    object-fit: cover;
+}
+
+.wrapper {
+    width:100vw;
+    height:100vh;
+    position:absolute;
+    
+}
