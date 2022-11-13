@@ -40,6 +40,10 @@ body {
   gap: 30px;
   flex-direction: column;
 }
+.header a {
+  color: black;
+  font-weight: bold;
+}
 
 .title {
   font-size: 30px;
