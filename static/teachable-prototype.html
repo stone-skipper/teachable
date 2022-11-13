@@ -2,23 +2,78 @@
 <html>
   <!-- https://medium.com/@baruahd5/create-image-classifier-with-node-js-tensorflow-js-google-teachable-machine-280ee5f92bad -->
   <head>
-    <title>Teachable Machine Simple Interactions</title>
+    <title>Teachable Machine Simple Prototype</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
-    <div id="title">
-      <h1 class="title">Teachable Machine Simple Interactions <br /></h1>
-      <a href="https://teachablemachine.withgoogle.com/"
-        >https://teachablemachine.withgoogle.com/</a
-      >
-      <button type="button" onclick="init()" id="init">Start</button>
+    <div class="wrapper">
+      <div id="window" style="visibility: visible">
+        <div class="header">
+          <h1 class="title">Teachable Machine Simple <br />Interactions</h1>
+          <div id="label" class="label" style="display: none">
+            <ul>
+              <li>
+                <span id="class1n" class="name">1</span
+                ><progress id="1-progress" max="1"></progress
+                ><span id="class1v" class="value"></span>
+              </li>
+              <li>
+                <span id="class2n" class="name">2</span
+                ><progress id="2-progress" max="1"></progress
+                ><span id="class2v" class="value"></span>
+              </li>
+              <li>
+                <span id="class3n" class="name">3</span
+                ><progress id="3-progress" max="1"></progress
+                ><span id="class3v" class="value"></span>
+              </li>
+              <li>
+                <span id="class4n" class="name">4</span
+                ><progress id="4-progress" max="1"></progress
+                ><span id="class4v" class="value"></span>
+              </li>
+              <li>
+                <span id="class5n" class="name">5</span
+                ><progress id="5-progress" max="1"></progress
+                ><span id="class5v" class="value"></span>
+              </li>
+              <li>
+                <span id="class6n" class="name">6</span
+                ><progress id="6-progress" max="1"></progress
+                ><span id="class6v" class="value"></span>
+              </li>
+            </ul>
+          </div>
+          <p id="howto">
+            ** MAX 6 CONDITIONS **<br /><br />
+            1. TRAIN YOUR MODEL FROM
+            <a
+              href="https://teachablemachine.withgoogle.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >HERE</a
+            ><br />
+            2. EXPORT & IMPORT THE MODEL <br />3. BRING IMAGES FOR EACH
+            CONDITIONb
+          </p>
+        </div>
+        <div class="input">
+          <div id="webcam-container"></div>
+          <button type="button" onclick="init()" id="init">start</button>
+        </div>
+        <div class="footer">DESIGNED FOR QUICK DEMO <br />BY SEUNGMEE LEE</div>
+      </div>
+
+      <button id="closeBtn" onclick="toggle()" style="transform: rotate(0deg)">
+        <p>→</p>
+      </button>
     </div>
 
     <div class="interaction">
@@ -42,54 +97,6 @@
       </div>
     </div>
 
-    <div class="wrapper">
-      <button
-        type="button"
-        onclick="toggle()"
-        id="toggle"
-        style="display: none"
-      >
-        Toggle Camera
-      </button>
-
-      <div id="webcam-container"></div>
-
-      <div id="label" class="label">
-        <!-- made for max 6 conditions -->
-        <ul>
-          <li>
-            <span id="class1n">1</span
-            ><progress id="1-progress" max="1"></progress
-            ><span id="class1v"></span>
-          </li>
-          <li>
-            <span id="class2n">2</span
-            ><progress id="2-progress" max="1"></progress
-            ><span id="class2v"></span>
-          </li>
-          <li>
-            <span id="class3n">3</span
-            ><progress id="3-progress" max="1"></progress
-            ><span id="class3v"></span>
-          </li>
-          <li>
-            <span id="class4n">4</span
-            ><progress id="4-progress" max="1"></progress
-            ><span id="class4v"></span>
-          </li>
-          <li>
-            <span id="class5n">5</span
-            ><progress id="5-progress" max="1"></progress
-            ><span id="class5v"></span>
-          </li>
-          <li>
-            <span id="class6n">6</span
-            ><progress id="6-progress" max="1"></progress
-            ><span id="class6v"></span>
-          </li>
-        </ul>
-      </div>
-    </div>
     <div id="file">
       <div id="modelfiles">
         <div class="inputWrapper">

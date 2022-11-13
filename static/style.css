@@ -1,0 +1,214 @@
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #ffb800;
+  font-family: "IBM Plex Mono";
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+#window {
+  width: fit-content;
+  height: fit-content;
+  padding: 25px;
+  background-color: white;
+  border-radius: 5px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.header {
+  width: 28vw;
+  color: black;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#webcam-container {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  object-fit: contain;
+  background: #fcf5e4;
+  border-radius: 5px;
+}
+
+#init {
+  width: 100%;
+  padding: 16px 0;
+  background-color: #ffb800;
+  font-family: "IBM Plex Mono";
+  border: none;
+  color: white;
+  font-size: 1.1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footer {
+  font-size: 0.9em;
+  text-align: right;
+  color: #ffb800;
+  margin-top: 10px;
+}
+
+/* for close button */
+#closeBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background: #fcf5e4;
+  color: #ffb800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
+  cursor: pointer;
+  border: none;
+  font-family: "IBM Plex Mono";
+  transform: rotate(0deg);
+}
+
+#closeBtn p {
+  font-size: 30px;
+  transform: rotate(135deg);
+  margin-left: 6px;
+}
+
+/* for interaction images */
+.interaction .int {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  z-index: 0;
+}
+
+.int img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* for label */
+.label li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.name {
+  width: 80px;
+}
+
+progress {
+  border-radius: 5px;
+  display: block;
+  height: 10px;
+  background: #fcf5e4;
+  width: 60%;
+}
+progress::-webkit-progress-value {
+  background-color: #ffb800;
+  border-radius: 5px;
+}
+progress::-webkit-progress-bar {
+  border-radius: 5px;
+  background: #fcf5e4;
+}
+.label {
+  display: none;
+  width: 100%;
+  height: fit-content;
+}
+.label ul {
+  padding: 0;
+  width: 100%;
+}
+
+.value {
+  color: #ffb800;
+}
+
+/* for file input */
+#file {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  position: absolute;
+  right: 0;
+  height: 100vh;
+}
+
+#modelfiles {
+  display: grid;
+  width: fit-content;
+  height: fit-content;
+  grid-template-columns: repeat(3, 250px);
+}
+.imgFiles {
+  display: grid;
+  width: fit-content;
+  height: fit-content;
+  grid-template-columns: repeat(3, 250px);
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 150px;
+  border-radius: 8px;
+  border: 2px dashed white;
+  text-align: center;
+  position: relative;
+}
+
+.inputWrapper img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
