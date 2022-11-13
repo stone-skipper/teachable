@@ -103,6 +103,7 @@ body {
   border: none;
   font-family: "IBM Plex Mono";
   transform: rotate(0deg);
+  text-transform: uppercase;
 }
 
 #closeBtn p {
