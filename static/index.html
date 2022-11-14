@@ -16,7 +16,7 @@
     <div class="wrapper">
       <div id="window" style="visibility: visible">
         <div class="header">
-          <h1 class="title">Teachable Machine Simple <br />Interactions</h1>
+          <h1 class="title">Teachable Machine Simple <br />Prototype</h1>
           <div id="label" class="label" style="display: none">
             <ul>
               <li>
@@ -97,37 +97,6 @@
     </div>
 
     <div id="file">
-      <div id="modelfiles">
-        <div class="inputWrapper">
-          <p>metadata.json</p>
-          <input
-            type="file"
-            name="metadata.json"
-            id="metadata"
-            onchange="loadModel(event)"
-          />
-        </div>
-        <div class="inputWrapper">
-          <p>model.json</p>
-
-          <input
-            type="file"
-            name="model.json"
-            id="model"
-            onchange="loadModel(event)"
-          />
-        </div>
-        <div class="inputWrapper">
-          <p>weights.bin</p>
-
-          <input
-            type="file"
-            name="weights.bin"
-            id="weights"
-            onchange="loadModel(event)"
-          />
-        </div>
-      </div>
       <div class="imgFiles">
         <div class="inputWrapper">
           <p>image for condition 1</p>
@@ -199,5 +168,15 @@
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
     <script src="./predict.js"></script>
+    <script type="text/javascript">
+      function WriteToFile(passForm) {
+        let fso = CreateObject("Scripting.FileSystemObject");
+        let s = fso.CreateTextFile("test.txt", True);
+        s.writeline(document.passForm.input1.value);
+        s.writeline(document.passForm.input2.value);
+        s.writeline(document.passForm.input3.value);
+        s.Close();
+      }
+    </script>
   </body>
 </html>

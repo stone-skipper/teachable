@@ -77,6 +77,8 @@ body {
   font-size: 1.1em;
   border-radius: 5px;
   cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .footer {
@@ -103,7 +105,6 @@ body {
   border: none;
   font-family: "IBM Plex Mono";
   transform: rotate(0deg);
-  text-transform: uppercase;
 }
 
 #closeBtn p {

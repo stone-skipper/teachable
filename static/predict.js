@@ -1,5 +1,6 @@
 // the link to your model provided by Teachable Machine export panel
 const URL = `tm-my-image-model/`;
+import fs from "fs";
 
 let model, webcam, maxPredictions, happy, sad, angry;
 let refresh = true;
@@ -17,10 +18,6 @@ async function loadImage(event, id) {
   var image = document.getElementById(id);
   image.src = window.URL.createObjectURL(event.target.files[0]);
   imageprev.src = window.URL.createObjectURL(event.target.files[0]);
-}
-
-async function loadModel(event, id) {
-  var file = document.getElementById(id);
 }
 
 // Load the image model and setup the webcam
