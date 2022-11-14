@@ -3,5 +3,4 @@ const app = express();
 
 app.use(express.static("./static"));
 
-
 module.exports = app;

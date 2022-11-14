@@ -1,6 +1,5 @@
 // the link to your model provided by Teachable Machine export panel
 const URL = `tm-my-image-model/`;
-import fs from "fs";
 
 let model, webcam, maxPredictions, happy, sad, angry;
 let refresh = true;
