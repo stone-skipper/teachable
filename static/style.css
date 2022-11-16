@@ -163,6 +163,10 @@ progress::-webkit-progress-bar {
   width: 100%;
   height: fit-content;
 }
+
+.labelItems {
+  display: none;
+}
 .label ul {
   padding: 0;
   width: 100%;

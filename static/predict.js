@@ -1,7 +1,7 @@
 // the link to your model provided by Teachable Machine export panel
 const URL = `tm-my-image-model/`;
 
-let model, webcam, maxPredictions, happy, sad, angry;
+let model, webcam, maxPredictions;
 let refresh = true;
 let c1n, c2n, c3n, c4n, c5n, c6n;
 let c1v, c2v, c3v, c4v, c5v, c6v;
@@ -105,10 +105,13 @@ async function toggle() {
 async function predict() {
   // predict can take in an image, video or canvas html element
   const prediction = await model.predict(webcam.canvas);
+
   for (let i = 0; i < maxPredictions; i++) {
     // console.log(maxPredictions);
     array[i] = Number(prediction[i].probability.toFixed(2));
     console.log(array);
+
+    document.getElementsByClassName("labelItems")[i].style.display = "flex";
 
     highestValue = Math.max(...array);
     highestIndex = array.indexOf(highestValue);
@@ -189,15 +192,5 @@ async function predict() {
       c6v.innerHTML = prediction[i].probability.toFixed(2);
       c6p.value = prediction[i].probability.toFixed(2);
     }
-
-    // if (prediction[i].className == "hand") {
-    //     happy.innerHTML = prediction[i].probability.toFixed(2);
-    //     document.getElementById("happy-progress").value = prediction[i].probability.toFixed(2);
-    // }
-
-    // if (prediction[i].className == "no hand") {
-    //     angry.innerHTML = prediction[i].probability.toFixed(2);
-    //     document.getElementById("angry-progress").value = prediction[i].probability.toFixed(2);
-    // }
   }
 }
