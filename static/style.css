@@ -105,6 +105,7 @@ body {
   border: none;
   font-family: "IBM Plex Mono";
   transform: rotate(0deg);
+  transition: 0.4s;
 }
 
 #closeBtn p {
@@ -164,9 +165,6 @@ progress::-webkit-progress-bar {
   height: fit-content;
 }
 
-.labelItems {
-  display: none;
-}
 .label ul {
   padding: 0;
   width: 100%;
@@ -189,30 +187,66 @@ progress::-webkit-progress-bar {
   height: 100vh;
 }
 
-#modelfiles {
-  display: grid;
-  width: fit-content;
-  height: fit-content;
-  grid-template-columns: repeat(3, 250px);
-}
 .imgFiles {
   display: grid;
   width: fit-content;
   height: fit-content;
   grid-template-columns: repeat(3, 250px);
+  grid-template-rows: repeat(2, 200px);
+}
+
+input[type="file"] {
+  width: 90%;
+  overflow: hidden;
+  display: none;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  border: none;
+  padding: 5px;
+  font-family: "IBM Plex Mono";
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 3px;
+  text-align: center;
+}
+
+input[type="file"]::before {
+  display: none;
+  text-align: center;
+
+  /* content: "add img for condition"; */
 }
 
 .inputWrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 200px;
   height: 150px;
   border-radius: 8px;
   border: 2px dashed white;
   text-align: center;
   position: relative;
+  cursor: pointer;
+  background: transparent;
+  transition: 0.4s;
+}
+
+.inputWrapper:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+label {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  cursor: pointer;
 }
 
 .inputWrapper img {
@@ -221,4 +255,5 @@ progress::-webkit-progress-bar {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 0;
 }
