@@ -119,47 +119,47 @@ async function predict() {
     console.log(highestIndex);
 
     if (highestIndex === 0) {
-      int1.style.display = "block";
-      int2.style.display = "none";
-      int3.style.display = "none";
-      int4.style.display = "none";
-      int5.style.display = "none";
-      int6.style.display = "none";
+      int1.style.opacity = 1;
+      int2.style.opacity = 0;
+      int3.style.opacity = 0;
+      int4.style.opacity = 0;
+      int5.style.opacity = 0;
+      int6.style.opacity = 0;
     } else if (highestIndex === 1) {
-      int1.style.display = "none";
-      int2.style.display = "block";
-      int3.style.display = "none";
-      int4.style.display = "none";
-      int5.style.display = "none";
-      int6.style.display = "none";
+      int1.style.opacity = 0;
+      int2.style.opacity = 1;
+      int3.style.opacity = 0;
+      int4.style.opacity = 0;
+      int5.style.opacity = 0;
+      int6.style.opacity = 0;
     } else if (highestIndex === 2) {
-      int1.style.display = "none";
-      int2.style.display = "none";
-      int3.style.display = "block";
-      int4.style.display = "none";
-      int5.style.display = "none";
-      int6.style.display = "none";
+      int1.style.opacity = 0;
+      int2.style.opacity = 0;
+      int3.style.opacity = 1;
+      int4.style.opacity = 0;
+      int5.style.opacity = 0;
+      int6.style.opacity = 0;
     } else if (highestIndex === 3) {
-      int1.style.display = "none";
-      int2.style.display = "none";
-      int3.style.display = "none";
-      int4.style.display = "block";
-      int5.style.display = "none";
-      int6.style.display = "none";
+      int1.style.opacity = 0;
+      int2.style.opacity = 0;
+      int3.style.opacity = 0;
+      int4.style.opacity = 1;
+      int5.style.opacity = 0;
+      int6.style.opacity = 0;
     } else if (highestIndex === 4) {
-      int1.style.display = "none";
-      int2.style.display = "none";
-      int3.style.display = "none";
-      int4.style.display = "none";
-      int5.style.display = "block";
-      int6.style.display = "none";
+      int1.style.opacity = 0;
+      int2.style.opacity = 0;
+      int3.style.opacity = 0;
+      int4.style.opacity = 0;
+      int5.style.opacity = 1;
+      int6.style.opacity = 0;
     } else if (highestIndex === 5) {
-      int1.style.display = "none";
-      int2.style.display = "none";
-      int3.style.display = "none";
-      int4.style.display = "none";
-      int5.style.display = "none";
-      int6.style.display = "block";
+      int1.style.opacity = 0;
+      int2.style.opacity = 0;
+      int3.style.opacity = 0;
+      int4.style.opacity = 0;
+      int5.style.opacity = 0;
+      int6.style.opacity = 1;
     }
 
     if (i === 0) {

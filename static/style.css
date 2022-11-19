@@ -122,8 +122,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  display: none;
+  opacity: 0;
   z-index: 0;
+  transition: 0.3s;
 }
 
 .int img {
